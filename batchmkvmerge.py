@@ -171,7 +171,7 @@ def get_user_input(argvs):
             print('''Usage: batchmkvmerge [DIRS]... [OPTIONS]...
 
 Helper script to easily batch remux .mkv files using MKVToolNix
-By default it will discard everything but the first video and audio track and it\'s flags
+By default it will discard everything but the first video and audio track and its properties
 ''')
             for k, v in arg_tup:
                 print(k.ljust(30), v)
