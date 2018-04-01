@@ -11,7 +11,7 @@ Probably need to install `colorama` and `send2trash` via `pip3 install` first.
 Then run the scipt with `-h` or `--help` to see usage information.
 
 ```
-By default it will discard everything but the first video and audio track and it's flags
+By default it will discard everything but the first video and audio track and its properties
 
 -h, --help                     Display this help section
 -i, --in-path                  Input path
