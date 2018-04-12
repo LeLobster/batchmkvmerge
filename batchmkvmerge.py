@@ -313,15 +313,17 @@ def process_stdout(json_out):
     file_info = []
 
     for t in json_out['tracks']:
-        for i in str(t['id']):
-            track_dict[i] = {'type': t['type'],
-                             'codec_id': t['properties']['codec_id'],
-                             'default_track': t['properties']['default_track'],
-                             'language': t['properties']['language']}
-            try:
-                track_dict[i]['track_name'] = t['properties']['track_name']
-            except KeyError:
-                track_dict[i]['track_name'] = ''
+        # TODO: Fix this, what was I even doing here?
+        # for i in str(t['id']):
+        i = str(t['id'])
+        track_dict[i] = {'type': t['type'],
+                         'codec_id': t['properties']['codec_id'],
+                         'default_track': t['properties']['default_track'],
+                         'language': t['properties']['language']}
+        try:
+            track_dict[i]['track_name'] = t['properties']['track_name']
+        except KeyError:
+            track_dict[i]['track_name'] = ''
 
     if json_out['attachments']:
         has_att = True
