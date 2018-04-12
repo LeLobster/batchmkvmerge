@@ -313,8 +313,6 @@ def process_stdout(json_out):
     file_info = []
 
     for t in json_out['tracks']:
-        # TODO: Fix this, what was I even doing here?
-        # for i in str(t['id']):
         i = str(t['id'])
         track_dict[i] = {'type': t['type'],
                          'codec_id': t['properties']['codec_id'],
